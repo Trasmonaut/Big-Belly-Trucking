@@ -400,7 +400,7 @@
     /* About Section */
     .about-section {
       background-color: var(--darker-bg);
-	  text-align: center;
+	    text-align: center;
     }
 
     .about-section .content-box {
