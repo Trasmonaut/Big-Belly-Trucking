@@ -15,6 +15,14 @@
   
 </head>
 <body>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <img src="assets/images/logo-2.gif" alt="BBT Logo">
+      <p>Loading...</p>
+    </div>
+  </div>
   <!-- Navigation -->
   <nav class="navbar">
     <div class="logo-container">
@@ -505,6 +513,13 @@
     // Optional: Auto-play
     setInterval(() => { nextBtn.click(); }, 4000);
   });
+
+    // Preloader functionality
+    const preloader = document.querySelector('.preloader');
+    window.addEventListener('load', function() {
+      preloader.style.display = 'none'; // Hide preloader when page is fully loaded
+    });
+
 </script> 
 
 </body>
