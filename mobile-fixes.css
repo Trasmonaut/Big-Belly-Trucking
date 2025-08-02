@@ -759,7 +759,7 @@
 
 /* Games Hero Section */
 .games-hero {
-  background-color: white;
+  background-color: var(--dark-card);
   text-align: center;
   padding-top: 100px;
   height: 80vh;
@@ -771,9 +771,6 @@
   left: 30%;
 }
 
-.games-hero p{
-  color: var(--darker-bg)
-}
 
 
 
