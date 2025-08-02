@@ -342,6 +342,8 @@
       background-color: var(--gold-secondary);
     }
 
+
+
     /* Hero Section */
     .hero {
       background: linear-gradient(rgba(26, 26, 29, 0.7), rgba(26, 26, 29, 0.7)), 
@@ -755,6 +757,26 @@
   vertical-align: middle;
 }
 
+/* Games Hero Section */
+.games-hero {
+  background-color: white;
+  text-align: center;
+  padding-top: 100px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.games-hero h1{
+  font-size: 3rem;
+  left: 30%;
+}
+
+.games-hero p{
+  color: var(--darker-bg)
+}
+
+
+
 @media (max-width: 900px) {
   .donator-split {
     flex-direction: column;
@@ -775,6 +797,7 @@
     max-width: 100%;
   }
 }
+
 
 
     /* Social Section */
