@@ -9,10 +9,14 @@
   <meta name="author" content="Big Belly Trucking Team">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="/assets/css/mobile-fixes.css">
-
   
+  <link rel="icon" href="assets/icon.ico" type="image/x-icon" />
+  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/mobile-fixes.css">
+  <link rel="stylesheet" href="/assets/css/more-bbt.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -315,13 +319,9 @@
         </div>
         <button class="carousel-btn next">&#10095;</button>
       </div>
-
-
-
+   </section>
    
-  </section>
-
-  
+  <!-- More BBT Section -->
   <section id="more-BBT" class="section about-section">
     <div class="container">
         <h2 class="section-title">Other Games</h2>
@@ -329,16 +329,16 @@
           <p> Big Belly Trucking is more than just a MotorTown crew — we're a passionate community of gamers who love the trucking life and dive into a variety of games together. Whether it's convoying through MotorTown or exploring new worlds, we're all about fun, teamwork, and creative role-playing.</p>
           <p>-</p>
           <h2>Press this button to see what other games we play!</h2>
-            <a href="comingsoon.html" class="btn primary-btn">
+            <a href="more-bbt.html" class="btn primary-btn">
             <i class="fa-solid fa-gamepad"></i></i></i> More BBT
           </a>
         </div>
     </div>
   </section>
 
-
-  <!-- Support Section -->
+   <!-- Support Section -->
   <section class="section support-section" id = "support">
+    <div data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Support Us</h2>
       <div class="support-content">
@@ -347,11 +347,14 @@
         <p>Every donation goes directly into the running of the community.</p>
         <p>Thank you for your support! ❤️</p>
         <div>
-          <a href="404.html" class="btn primary-btn">
-            <i class="fa-solid fa-shop"></i></i> View Shop
+          <a href="https://big-belly-trucking.myspreadshop.co.uk/" class="btn primary-btn">
+            <i class="fa-solid fa-shop"></i> BBT Shop
           </a>
-          <a href="https://www.paypal.com/paypalme/mtbbt" class="btn primary-btn" target="_blank">
-            <i class="fab fa-paypal"></i> Support Us
+            <a href="https://bbt-minecraft-server.tebex.io/" class="btn primary-btn">
+            <i class="fa-solid fa-store"></i> BBT Minecraft Shop
+          </a>
+          <a href="https://www.patreon.com/BigBellyTrucking" class="btn primary-btn" target="_blank">
+            <i class="fab fa-patreon"></i> Patreon
           </a>
         </div>
       </div>
@@ -366,110 +369,17 @@
         <a href="https://www.tiktok.com/@bigbellytrucking" target="_blank" aria-label="TikTok">
           <i class="fab fa-tiktok"></i>
         </a>
+        <a href="https://discord.gg/BigBelly" target="_blank" aria-label="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
       </div>
+    </div>
     </div>
   </section>
 
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2024-2025 Big Belly Trucking. All rights reserved.</p>
-      <p>MotorTown Trucking Community</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Mobile menu toggle
-      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      
-      mobileMenuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        
-        // Animate hamburger to X
-        const spans = this.querySelectorAll('span');
-        if (this.classList.contains('active')) {
-          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-          spans[1].style.opacity = '0';
-          spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-        } else {
-          spans[0].style.transform = 'rotate(0) translate(0)';
-          spans[1].style.opacity = '1';
-          spans[2].style.transform = 'rotate(0) translate(0)';
-        }
-      });
-      
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // Close mobile menu if open
-          if (navLinks.classList.contains('active')) {
-            mobileMenuToggle.click();
-          }
-          
-          const targetId = this.getAttribute('href');
-          if (targetId === '#') return;
-          
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 70,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-      
-      // Add shadow to navbar on scroll
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-          document.querySelector('.navbar').style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15); padding:20px';
-        } else {
-          document.querySelector('.navbar').style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1) ;padding:20px';
-        }
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.carousel-img');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    let current = 0;
-
-    function showSlide(idx) {
-      images.forEach((img, i) => img.classList.toggle('active', i === idx));
-    }
-
-    prevBtn.addEventListener('click', function() {
-      current = (current - 1 + images.length) % images.length;
-      showSlide(current);
-    });
-
-    nextBtn.addEventListener('click', function() {
-      current = (current + 1) % images.length;
-      showSlide(current);
-    });
-
-    // Optional: Auto-play
-    setInterval(() => { nextBtn.click(); }, 4000);
-  });
-
-    // Preloader functionality
-    const preloader = document.querySelector('.preloader');
-    window.addEventListener('load', function() {
-      
-      preloader.style.display = 'none'; // Hide preloader when page is fully loaded
-    });
-
-</script> 
-
 </body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script>
+   AOS.init();
+ </script>
 </html>

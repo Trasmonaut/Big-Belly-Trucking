@@ -1,0 +1,62 @@
+body {
+  padding-top: 100px; /* adjust this to match your navbar height */
+
+
+}
+.left-content, .right-content {
+  margin: 30px;
+
+}
+
+.game-container {
+  background-color: var(--dark-card);
+  border: 1px solid var(--gold-primary);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.game-title {
+ font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-gold);
+  margin-bottom: 10px;
+}
+
+.game-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+/* Container */
+.row {
+  display: flex;
+  align-items: center;     /* vertically align image + text */
+  justify-content: space-between;
+  gap: 20px;               /* space between columns */
+  flex-wrap: wrap;         /* stack on small screens */
+}
+
+/* Each column */
+.col {
+  flex: 1;                 /* take equal space */
+  min-width: 300px;        /* prevents squishing too much */
+}
+
+/* Text column */
+
+.image-col {
+  display: flex;
+  justify-content: flex-end;  /* push image to the right */
+}
+/* Image column */
+.image-col img {
+  width: 100%;             /* responsive image */
+  height: auto;
+  border-radius: 8px;      /* optional styling */
+}
+
+.right-text {
+  text-align: right;       /* align text to the right */
+}
