@@ -1,0 +1,66 @@
+.leaflet-top {
+    top : 10%;
+}
+#summaryCollapse{
+    color: black;
+}
+
+#player-panel{
+    top:25%;
+        /* background-color: black; */
+        background-color:rgba(0, 0, 0, 1);
+        color:gold;
+}
+.leaflet-control-layers.leaflet-control{
+    background-color:rgba(0, 0, 0, 1);
+    color:gold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.leaflet-touch.leaflet-control-layers-toggle{
+    background-color: black;
+    border-radius:6px;
+}
+
+button[data-toggle="collapse"]{
+    color:gold !important;
+}
+
+.card-body .stats-grid .stat-item{
+    color:white;
+    background-color:#181c1c;
+}
+
+#player-search{
+    background-color:#181c1c;
+    border-color: gold;
+    color:white;
+}
+
+div.leaflet-control-zoom.leaflet-bar.leaflet-control a{
+    background-color:#181c1c;
+    color:gold;
+    border-color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+}
+
+#total-players , #total-admins , #total-police{
+    color: gold;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  #player-panel {
+    top:8%;
+  }
+  .leaflet-top.leaflet-left,.leaflet-top.leaflet-right{
+    top:25%;
+  }
+  .leaflet-top.leaflet-left{
+    left:5%;
+  }
+  .leaflet-top.leaflet-right{
+    right:5%;
+  }
+}

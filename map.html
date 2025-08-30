@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  
+
+  <title>Big Belly Trucking - Live Map</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/mobile-fixes.css">
+    <link rel="stylesheet" href="assets/css/bbtmap.css">
+
+  
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo-2.gif" alt="BBT-Logo">
+        <span>Big Belly Trucking</span>
+      </a>
+    </div>
+    
+    <div class="nav-right">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-links">
+        <a href="/map.html">Live Map</a>
+        <a href="/#features">Features</a>
+        <a href="/#endorsed-mods">Endorsed Mods</a>
+        <a href="/#rules">Rules</a>
+        <a href="/#bbpd">BBPD</a>
+        <a href="/#gallery">Gallery</a>
+        <a href="/#more-games"> More Games </a>
+        <a href="https://discord.gg/BigBelly" class="btn primary-btn" target="_blank">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="/#support" class="btn primary-btn">
+          <i class="fa-solid fa-shop"></i></i> Support Us
+        </a>
+      </div>
+    </div>
+  </nav>
+
+<div id="map"></div>
+    <div id="player-panel" class="card">
+        <div class="accordion" id="playerAccordion">
+            <!-- Player Summary Section -->
+            <div class="card">
+                <div class="card-header" id="summaryHeading">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#summaryCollapse" aria-expanded="true">
+                            Summary
+                        </button>
+                    </h2>
+                </div>
+                <div id="summaryCollapse" class="collapse show" aria-labelledby="summaryHeading"
+                    data-parent="#playerAccordion">
+                    <div class="card-body">
+                        <div class="stats-grid">
+                            <div class="stat-item">Total Players<br><span id="total-players">0</span></div>
+                            <div class="stat-item">Admins<br><span id="total-admins">0</span></div>
+                            <div class="stat-item">Police<br><span id="total-police">0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Players List Section -->
+            <div class="card">
+                <div class="card-header" id="playerHeading">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#playerCollapse" aria-expanded="true">
+                            Players
+                        </button>
+                    </h2>
+                </div>
+                <div id="playerCollapse" class="collapse show" aria-labelledby="playerHeading"
+                    data-parent="#playerAccordion">
+                    <div class="card-body">
+                        <input type="text" id="player-search" class="form-control mb-2" placeholder="Search players...">
+                        <ul id="player-list" class="list-group">
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/map.js"></script>
+
+
+</body>
+</html>
